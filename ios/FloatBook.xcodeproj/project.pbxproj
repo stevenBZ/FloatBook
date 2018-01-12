@@ -530,6 +530,10 @@
 				00E356EF1AD99517003FC87E /* FloatBookTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				C41802941F4442FF003D1E8F /* Frameworks */,
+<<<<<<< HEAD
+=======
+				C41EB0A82005319400DB769A /* Recovered References */,
+>>>>>>> finish functions
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -563,6 +567,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		C41EB0A82005319400DB769A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				82D375C4A755403F9E88C368 /* libimageCropPicker.a */,
+				63968AFACEA44623A5143B8F /* libRCTBEEPickerManager.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+>>>>>>> finish functions
 		C4A1C9051F5C744100033F76 /* Products */ = {
 			isa = PBXGroup;
 			children = (

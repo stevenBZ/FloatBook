@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /***********************************************
  *
  * MIT License
@@ -22,6 +23,9 @@
  * SOFTWARE.
  *
  */
+=======
+
+>>>>>>> finish functions
 
 import {AsyncStorage} from "react-native"
 import {SERVICE_BASE} from "domain/def"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /***********************************************
  *
  * MIT License
@@ -22,6 +23,8 @@
  * SOFTWARE.
  *
  */
+=======
+>>>>>>> finish functions
 
 import React, {Component} from 'react'
 

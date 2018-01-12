@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /**
  *
  * ramroll on 2016/10/24.
  */
+=======
+>>>>>>> finish functions
 
 
 export const COLOR_PRIMARY = "#188ae4"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /***********************************************
  *
  * MIT License
@@ -25,3 +26,7 @@
 
 export const SERVICE_BASE = "https://ketang.zhufengpeixun.cn"
 // export const SERVICE_BASE = "http://127.0.0.1:2701"
+=======
+
+export default SERVICE_BASE = "http://localhost:8888/api/";
+>>>>>>> finish functions

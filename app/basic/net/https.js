@@ -1,7 +1,7 @@
 import qs from 'qs';
 
 let http_req = {
-  postJson(url, data, callback){
+  postJson(url, data){
         var fetchOptions = {
           method: 'POST',
           headers: {
@@ -13,9 +13,7 @@ let http_req = {
         fetch(url, fetchOptions)
         .then((response) => response.text())
         .then((responseText) => {
-          // callback(JSON.parse(responseText));
-           callback(responseText);
-<<<<<<< HEAD
+                responseText
         }).catch(e => {
             store.dispatch({
               type : "NETWORK_ERROR",
@@ -25,19 +23,6 @@ let http_req = {
               }
               
             })
-=======
-        })
-        .catch(e => {
-            // store.dispatch({
-            //   type : "NETWORK_ERROR",
-            //   cache : {
-            //     url,
-            //     fetchOptions 
-            //   }
-              
-            // })
-            console.log(e)
->>>>>>> finish functions
 
           });
   },
@@ -67,32 +52,24 @@ let http_req = {
 
           });
   },
-  getData(url,callback,params){
+  getData(url,params){
     var fetchOptions = {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
             }
         };
+    var result;
     const queryString=qs.stringify(params);
     url=`${url}${queryString&&"?"+queryString}`;
     console.log(url);
     fetch(url, fetchOptions)
         .then((response) => response.text())
         .then((responseText) => {
-          // callback(JSON.parse(responseText));
-           callback(responseText);
+           console.log('结果为:',responseText)
+           result=responseText;
+           
         }).catch(e => {
-<<<<<<< HEAD
-            store.dispatch({
-              type : "NETWORK_ERROR",
-              cache : {
-                url,
-                fetchOptions
-              }
-              
-            })
-=======
             // store.dispatch({
             //   type : "NETWORK_ERROR",
             //   cache : {
@@ -102,9 +79,8 @@ let http_req = {
               
             // })
             throw(e);
->>>>>>> finish functions
-
           });
+        return result;
   }
 }
 export default http_req;
