@@ -13,17 +13,11 @@
 		"react-native": "0.46.3",
 		"react-native-image-crop-picker": "^0.15.1",
 		"react-native-picker": "^4.0.10",
-<<<<<<< HEAD
-		"react-native-swiper": "^1.5.4",
-		"react-navigation": "^1.0.0-beta.11",
-		"react-timer-mixin": "^0.13.3"
-=======
 		"react-native-reversed-flat-list": "^1.0.2",
 		"react-native-swiper": "^1.5.4",
 		"react-navigation": "^1.0.0-beta.11",
 		"react-timer-mixin": "^0.13.3",
 		"socket.io-client": "^2.0.3"
->>>>>>> finish functions
 	},
 	"devDependencies": {
 		"@remobile/react-native-toast": "^1.0.5",

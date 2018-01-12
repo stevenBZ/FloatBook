@@ -12,13 +12,9 @@ import {
   Image,
   StyleSheet,
   TextInput,
-<<<<<<< HEAD
-} from 'react-native';
-=======
   TouchableOpacity
 } from 'react-native';
 import SERVICE_BASE from 'app/basic/def/conf';
->>>>>>> finish functions
 
 // import {flexCenter} from 'basic'
 export default class UserScreen extends React.Component {
@@ -43,11 +39,7 @@ export default class UserScreen extends React.Component {
   componentDidMount() {
     let token=get_local_token();
     if(token){
-<<<<<<< HEAD
-    let url = "http://localhost:8888/api/haveLogin";
-=======
     let url = SERVICE_BASE+"haveLogin";
->>>>>>> finish functions
        http_req.checkToken(url,token,(responseText) => {
           if(responseText=='OK'){
             // alert('hhh');
@@ -61,11 +53,7 @@ export default class UserScreen extends React.Component {
     let formData = new FormData();
     formData.append("username",this.username);
     formData.append("password",this.password);
-<<<<<<< HEAD
-    let url = "http://localhost:8888/api/login";
-=======
     let url = SERVICE_BASE+"login";
->>>>>>> finish functions
     http_req.postJson(url,formData,(responseText) => {
           alert(responseText);
           // alert(this.props);
@@ -77,11 +65,7 @@ export default class UserScreen extends React.Component {
   }
 
   getBookData=()=>{
-<<<<<<< HEAD
-    let url="http://localhost:8888/api/getBookData";
-=======
     let url=SERVICE_BASE+"getBookData";
->>>>>>> finish functions
      http_req.getData(url,(responseText) => {
           alert(responseText);
         })
@@ -89,11 +73,7 @@ export default class UserScreen extends React.Component {
   }
 
    DelBooks=()=>{
-<<<<<<< HEAD
-    let url="http://localhost:8888/api/delBooks";
-=======
     let url=SERVICE_BASE+"delBooks";
->>>>>>> finish functions
      http_req.getData(url,(responseText) => {
           alert(responseText);
         })
@@ -102,11 +82,7 @@ export default class UserScreen extends React.Component {
 
 
   getBookUsers=()=>{
-<<<<<<< HEAD
-    let url="http://localhost:8888/api/getUsers";
-=======
     let url=SERVICE_BASE+"getUsers";
->>>>>>> finish functions
      http_req.getData(url,(responseText) => {
           var result=JSON.parse(responseText)['result'];
           var str='';
@@ -119,11 +95,7 @@ export default class UserScreen extends React.Component {
   }
 
     getAllUserDetails=()=>{
-<<<<<<< HEAD
-        let url="http://localhost:8888/api/getAllUserDetails";
-=======
         let url=SERVICE_BASE+"getAllUserDetails";
->>>>>>> finish functions
         http_req.getData(url,(responseText) => {
             // var result=JSON.parse(responseText)['result'];
             // var str='';
@@ -136,8 +108,6 @@ export default class UserScreen extends React.Component {
 
     }
 
-<<<<<<< HEAD
-=======
     deleteAllMessage=()=>{
           let url=SERVICE_BASE+"delChatHistory";
             http_req.getData(url,(responseText) => {
@@ -146,7 +116,6 @@ export default class UserScreen extends React.Component {
 
     }
 
->>>>>>> finish functions
   logOut=()=>{
      store.dispatch({
                type : "LOGOUT"
@@ -170,37 +139,21 @@ export default class UserScreen extends React.Component {
               style={styles.style_image} 
               source={require('../img/huanghualuo.jpg')}/>
               <View style={styles.portraitTitle}>
-<<<<<<< HEAD
-              <Text>欢迎!{store.getState().user.name}</Text>      
-            </View>
-          </View>
-          <View style={styles.funcList}>
-=======
               <Text>欢迎!   {store.getState().user.name}</Text>      
             </View>
           </View>
           <View style={styles.funcList}>
 <TouchableOpacity onPress={()=>{this.props.navigation.navigate('MyBooks')}}> 
->>>>>>> finish functions
 <View style={styles.Iconwrap}>
   <Image style={styles.icon} source={require('app/img/book.png')}/>
   <Text style={styles.IconText}>我的教材</Text>
 </View>
-<<<<<<< HEAD
-=======
 </TouchableOpacity>
 <TouchableOpacity onPress={()=>{this.props.navigation.navigate('MyCollection')}}> 
->>>>>>> finish functions
 <View style={styles.Iconwrap}>
   <Image style={styles.icon} source={require('app/img/collect.png')}/>
   <Text style={styles.IconText}>我的收藏</Text>
 </View>
-<<<<<<< HEAD
-<View style={styles.Iconwrap}>
-  <Image style={styles.icon} source={require('app/img/group.png')}/>
-  <Text style={styles.IconText}>我的群组</Text>
-</View>
-=======
 </TouchableOpacity>
 <TouchableOpacity onPress={()=>{this.props.navigation.navigate('UpLoad',{user:'Lucy'})}}> 
 <View style={styles.Iconwrap}>
@@ -209,35 +162,16 @@ export default class UserScreen extends React.Component {
 </View>
 </TouchableOpacity>
 <TouchableOpacity onPress={()=>{this.props.navigation.navigate('InfoEdit')}}> 
->>>>>>> finish functions
 <View style={styles.Iconwrap}>
   <Image style={styles.icon} source={require('app/img/set.png')}/>
   <Text style={styles.IconText}>设置</Text>
 </View>
-<<<<<<< HEAD
-          </View>
-          <View style={styles.workList}>
-            <Text style={styles.workTitle}>发布漂流瓶</Text>
-
-              <Button
-                  onPress={() => this.props.navigation.navigate('UpLoad', { user: 'Lucy' })}
-                  title="I want to upload"
-              />
-
-              <Button
-                  onPress={() => this.props.navigation.navigate('Info')}
-                  title="我的信息"
-              />
-
-<Button
-=======
 </TouchableOpacity>
           </View>
           <View style={styles.workList}>
 
 <Button
   style={{color:'#FFF'}}
->>>>>>> finish functions
   onPress={this.logOut}
   title="登出"
 />
@@ -284,13 +218,10 @@ export default class UserScreen extends React.Component {
                   onPress={this.getAllUserDetails}
                   title="所有用户详细信息"
               />
-<<<<<<< HEAD
-=======
              <Button
                   onPress={this.deleteAllMessage}
                   title="删除所有聊天记录"
               />
->>>>>>> finish functions
 
 
           </View>
@@ -305,11 +236,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     height:100,
     alignItems:'center',
-<<<<<<< HEAD
-    borderWidth:0.5
-=======
     backgroundColor:'#EBEBEB'
->>>>>>> finish functions
   },
    portraitTip:{
     fontSize:20,
@@ -324,17 +251,6 @@ const styles = StyleSheet.create({
     height:70,
     width:70,
     marginLeft:40,
-<<<<<<< HEAD
-    // alignSelf:'center',
-  },
-  workList:{
-    marginTop:10,
-    borderWidth:0.5,
-  },
-  funcList:{
-    marginTop:10,
-    borderWidth:0.5,
-=======
   },
   workList:{
     marginTop:10,
@@ -343,7 +259,6 @@ const styles = StyleSheet.create({
   funcList:{
     marginTop:10,
     backgroundColor:'#EBEBEB',
->>>>>>> finish functions
     height:80,
     flexDirection:'row',
     justifyContent:'space-around',

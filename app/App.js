@@ -9,23 +9,16 @@ import { StackNavigator } from 'react-navigation';
 import { TabNavigator } from "react-navigation";
 import MainScreen from './page/MainScreen';
 import UserScreen from './page/UserScreen';
-<<<<<<< HEAD
-import RegScreen from './page/RegScreen';
-=======
 import MessageListScreen from './page/MessageListScreen';
 import RegistScreen from './page/RegistScreen';
->>>>>>> finish functions
 import LoginScreen from './page/LoginScreen';
 import UpLoadPage from './page/UpLoad';
 import InfoScreen from './page/InfoScreen';
 import InfoEditScreen from './page/InfoEditScreen';
 import BookDetailsScreen from './page/BookDetailsScreen';
-<<<<<<< HEAD
-=======
 import ChatRoomScreen from './page/ChatRoom';
 import MyBooksScreen from './page/MyBooksScreen';
 import MyCollectionScreen from './page/MyCollectionScreen';
->>>>>>> finish functions
 
 import {connect} from "react-redux"
 
@@ -49,11 +42,7 @@ class NoteScreen extends React.Component {
 
 const MainScreenNavigator = TabNavigator({
   Main: { screen: MainScreen },
-<<<<<<< HEAD
-  Register: { screen: RegScreen },
-=======
   MessageList: { screen: MessageListScreen },
->>>>>>> finish functions
   User: { screen: UserScreen }
 },
  {
@@ -75,15 +64,11 @@ const FloatBook = StackNavigator({
   Login:{screen:LoginScreen},
   Info:{screen:InfoScreen},
   InfoEdit:{screen:InfoEditScreen},
-<<<<<<< HEAD
-  BookDetails:{screen:BookDetailsScreen}
-=======
   BookDetails:{screen:BookDetailsScreen},
   ChatRoom:{screen:ChatRoomScreen},
   Regist:{screen:RegistScreen},
   MyBooks:{screen:MyBooksScreen},
   MyCollection:{screen:MyCollectionScreen},  
->>>>>>> finish functions
 });
 
 class _App extends Component {

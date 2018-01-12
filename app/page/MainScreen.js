@@ -9,11 +9,8 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import http_req from '../basic/net/http';
-<<<<<<< HEAD
-=======
 import SERVICE_BASE from 'app/basic/def/conf';
 
->>>>>>> finish functions
 
 
 export default class MainScreen extends React.Component {
@@ -34,11 +31,7 @@ export default class MainScreen extends React.Component {
     ),
   };
      componentDidMount() {
-<<<<<<< HEAD
-       let url="http://localhost:8888/api/getBookData";
-=======
       let url=SERVICE_BASE+"getBookData";
->>>>>>> finish functions
      http_req.getData(url,(responseText) => {
           var result=JSON.parse(responseText)['result'];
           for(var i=0;i<result.length;i++){
@@ -49,27 +42,13 @@ export default class MainScreen extends React.Component {
           });
           
         })
-<<<<<<< HEAD
-     // alert(JSON.stringify(this.state.bookList));
-     }
-=======
              }
->>>>>>> finish functions
 
 	   render() {
      return (
     	<View style={styles.container}>   
     	   <Swiper height={200}  autoplay={true}  style={styles.wrapper} >
         <View style={styles.slide1}>
-<<<<<<< HEAD
-          <Text style={styles.text}>Hello Swiper</Text>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
-        </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
-=======
           <Text style={styles.text}>FloatBook</Text>
         </View>
         <View style={styles.slide2}>
@@ -77,7 +56,6 @@ export default class MainScreen extends React.Component {
         </View>
         <View style={styles.slide3}>
           <Text style={styles.text}>thanks</Text>
->>>>>>> finish functions
         </View>
       </Swiper>	
       <View style={styles.subTitleLine}>
@@ -85,16 +63,6 @@ export default class MainScreen extends React.Component {
       </View> 
       <FlatList
           data={this.state.bookList}
-<<<<<<< HEAD
-          renderItem={({item}) => <TouchableOpacity onPress={()=>this.props.navigation.navigate('BookDetails',item)}>
-          <View style={styles.listItem}>
-                <Image source={{uri:item.uri}} style={styles.thumbnail}></Image>
-                <View style={styles.listItemRight}>
-                <Text>{item.title}</Text>
-                <Text>{item.author}</Text>
-                <Text>{item.intro}</Text>
-                <Text>{item.create_time}</Text>
-=======
           renderItem={({item}) => 
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('BookDetails',item)}>
           <View style={styles.listItem}>
@@ -107,7 +75,6 @@ export default class MainScreen extends React.Component {
                   <Text>{item.create_time.replace(/T.*/,'')}</Text>
                 </View>
 
->>>>>>> finish functions
                 </View>
           </View>
           </TouchableOpacity>

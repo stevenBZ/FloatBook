@@ -2,9 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-<<<<<<< HEAD
-}from 'react-native';
-=======
   Image,
   Dimensions,
   ScrollView,
@@ -14,24 +11,10 @@ import { WingBlank, WhiteSpace} from 'antd-mobile';
 import http_req from '../basic/net/http';
 import SERVICE_BASE from 'app/basic/def/conf';
 
->>>>>>> finish functions
 
 export default class BookDetails extends React.Component{
     constructor(props){
         super(props);
-<<<<<<< HEAD
-    }
-
-    render(){
-          const { params } = this.props.navigation.state;
-        return(
-            <View>
-                <Text>
-                	{JSON.stringify(params)}
-                </Text>
-                <View>
-                </View>
-=======
         this._doCollection.bind(this);
     }
 
@@ -107,7 +90,6 @@ export default class BookDetails extends React.Component{
                     <Text>收藏本文</Text>
                 </View>
                 </TouchableOpacity>
->>>>>>> finish functions
             </View>
         )
     }

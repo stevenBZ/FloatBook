@@ -36,10 +36,6 @@ export default class UserScreen extends React.Component {
                         </View>
                     </View>
                     <View style={styles.workList}>
-<<<<<<< HEAD
-                        <Text style={styles.workTitle}>发布漂流瓶</Text>
-=======
->>>>>>> finish functions
                         <Button
                             onPress={() => this.props.navigation.navigate('InfoEdit')}
                             title="修改信息"
@@ -53,18 +49,10 @@ export default class UserScreen extends React.Component {
 
 const styles = StyleSheet.create({
     portraitBox:{
-<<<<<<< HEAD
-        // flex:1,
-        marginTop:10,
-        flexDirection:'row',
-        height:70,
-        // backgroundColor:'#123123'
-=======
         marginTop:10,
         flexDirection:'row',
         height:100,
         backgroundColor:'#EBEBEB'
->>>>>>> finish functions
     },
     portraitTip:{
         fontSize:20,
@@ -82,14 +70,8 @@ const styles = StyleSheet.create({
         // alignSelf:'center',
     },
     workList:{
-<<<<<<< HEAD
-        marginTop:30,
-        borderTopColor:'#123123',
-        borderTopWidth:2,
-=======
         backgroundColor:'#EBEBEB',        
         marginTop:10,
->>>>>>> finish functions
     },
     workTitle:{
         fontSize:20,

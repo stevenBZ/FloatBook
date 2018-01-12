@@ -12,10 +12,7 @@ import {App} from "./App"
 import {Provider} from 'react-redux'
 import {init} from "./basic/redux/init"
 import http_req from "./basic/net/http"
-<<<<<<< HEAD
-=======
 import SERVICE_BASE from 'app/basic/def/conf';
->>>>>>> finish functions
 
 export class Entry extends Component {
 
@@ -41,11 +38,7 @@ export class Entry extends Component {
        * 项目中使用
        */
       global.store = __store;
-<<<<<<< HEAD
-      let url="http://localhost:8888/api/getBookData";
-=======
       let url=SERVICE_BASE+"getBookData";
->>>>>>> finish functions
      http_req.getData(url,()=>{});
       this.setState({store : __store});
       /**

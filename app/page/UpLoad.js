@@ -11,13 +11,8 @@ import {
 import http_req from '../basic/net/http';
 import { Button } from 'antd-mobile';
 import { Modal,WingBlank, WhiteSpace} from 'antd-mobile';
-<<<<<<< HEAD
-
-// const alert=Modal.alert;
-=======
 import SERVICE_BASE from 'app/basic/def/conf';
 
->>>>>>> finish functions
 
 
 
@@ -64,23 +59,12 @@ export default class RNCameraView extends Component {
             </View>
             <WhiteSpace/>
             <View style={{width:300}}>
-<<<<<<< HEAD
-            <Button type="ghost" onClick={this._beginUpImage}>注册</Button>
-=======
             <Button type="ghost" onClick={this._beginUpImage}>发布</Button>
->>>>>>> finish functions
             </View>
             </View>
             </WingBlank>
         )
     }
-<<<<<<< HEAD
-// <TouchableOpacity style={{width: 80, height: 60, backgroundColor: '#ffaaaa', marginTop: 20}}
-                //                   onPress={this._openTwoPicker}>
-                //     <Text>从相册中选择多张图片</Text>
-                // </TouchableOpacity>
-=======
->>>>>>> finish functions
     _chooseMethods=() => alert('选择上传方式','', [
         { text: '相册', onPress: () => this._openPicker()},
         { text: '照相', onPress: () => console.log('第1个按钮被点击了') }
@@ -92,11 +76,7 @@ export default class RNCameraView extends Component {
             'author':store.getState().user.name,
             'intro':this.intro,
         };
-<<<<<<< HEAD
-          let url = "http://localhost:8888/api/upload/uploadBook";
-=======
           let url = SERVICE_BASE+"uploadBook";
->>>>>>> finish functions
     http_req.postJson(url,params,(responseText) => {
            alert(responseText);
         });

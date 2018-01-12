@@ -15,17 +15,6 @@ let http_req = {
         .then((responseText) => {
           // callback(JSON.parse(responseText));
            callback(responseText);
-<<<<<<< HEAD
-        }).catch(e => {
-            store.dispatch({
-              type : "NETWORK_ERROR",
-              cache : {
-                url,
-                fetchOptions 
-              }
-              
-            })
-=======
         })
         .catch(e => {
             // store.dispatch({
@@ -37,7 +26,6 @@ let http_req = {
               
             // })
             console.log(e)
->>>>>>> finish functions
 
           });
   },
@@ -83,16 +71,6 @@ let http_req = {
           // callback(JSON.parse(responseText));
            callback(responseText);
         }).catch(e => {
-<<<<<<< HEAD
-            store.dispatch({
-              type : "NETWORK_ERROR",
-              cache : {
-                url,
-                fetchOptions
-              }
-              
-            })
-=======
             // store.dispatch({
             //   type : "NETWORK_ERROR",
             //   cache : {
@@ -102,7 +80,6 @@ let http_req = {
               
             // })
             throw(e);
->>>>>>> finish functions
 
           });
   }
