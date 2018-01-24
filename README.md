@@ -26,24 +26,24 @@
 
 主页
 
-<img src='./assets/main.png' style='width: 50%'>
+<img src='./assets/main.png' style='width: 20%'>
 
 详情页
 
-<img src='./assets/detail.png' style='width: 50%'>
+<img src='./assets/detail.png' style='width: 20%'>
 
 联系作者
 
-<img src='./assets/chatroom.png' style='width: 50%'>
+<img src='./assets/chatroom.png' style='width: 20%'>
 
 消息列表
 
-<img src='./assets/chatList.png' style='width: 50%'>
+<img src='./assets/chatList.png' style='width: 20%'>
 
 用户页
 
-<img src='./assets/user.png' style='width: 50%'>
+<img src='./assets/user.png' style='width: 20%'>
 
 登录
 
-<img src='./assets/login.png' style='width: 50%'>
+<img src='./assets/login.png' style='width: 20%'>
