@@ -20,13 +20,13 @@
 
 ### 功能模块：
 
-<img src='./assets/func.png' style='width: 50%'>
+<img src='./assets/func.png' style='max-width: 100%'>
 
 ### 运行截图：
 
 主页
 
-<img src='./assets/main.png' style='width: 20%'>
+<img src='./assets/main.png' style='width: 20%; height:20%'>
 
 详情页
 
