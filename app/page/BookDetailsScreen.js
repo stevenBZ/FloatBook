@@ -67,7 +67,7 @@ export default class BookDetails extends React.Component{
                     <Text>{params.title}</Text>
                 </View>
                 <View style={{height:50,alignItems:'center',justifyContent:'center'}}>
-                    <Text>Author: {params.author}</Text>
+                    <Text>发布人: {params.author}</Text>
                 </View>
                 <View>
                     <Text>{params.intro}</Text>

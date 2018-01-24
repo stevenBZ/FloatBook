@@ -47,7 +47,7 @@ export default class LoginSuccess extends React.Component {
           if(response['result']){
           var result=response['result'];
           let chatHistory=result.chatHistoryList;
-      
+          // alert(JSON.stringify(chatHistory))
           let chatList=[];
           for(let i=0,listLen=chatHistory.length;i<listLen;i++){
             var item={};
@@ -83,21 +83,14 @@ export default class LoginSuccess extends React.Component {
           message:item.message
         }
         nowMessage.push(item)
+        // alert(JSON.stringify(item))
 
         let url = SERVICE_BASE+"sendMessage";
         http_req.postJson(url,item,(responseText) => {
               let res=JSON.parse(responseText);
-              if(res['success']==true){
-                   
-               }
-              else{
-                
-              }
             })
 
         this.setState({...state,message:nowMessage,typing:"",selected:newSelected});
-       
-        console.log(this.state.message);
      }
 
     renderItem({item}){

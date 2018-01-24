@@ -19,6 +19,7 @@ export default class MainScreen extends React.Component {
        this.state={
         bookList:{}
        };
+       this.updateInfo.bind(this)
      }
 
       static navigationOptions = {
@@ -31,18 +32,22 @@ export default class MainScreen extends React.Component {
     ),
   };
      componentDidMount() {
-      let url=SERVICE_BASE+"getBookData";
-     http_req.getData(url,(responseText) => {
-          var result=JSON.parse(responseText)['result'];
-          for(var i=0;i<result.length;i++){
-              result[i].key=i;
-          }
-          this.setState({
-            bookList:result
-          });
-          
-        })
+      this.updateInfo()
              }
+     
+    updateInfo(){
+      let url=SERVICE_BASE+"getBookData";
+      http_req.getData(url,(responseText) => {
+           var result=JSON.parse(responseText)['result'];
+           for(var i=0;i<result.length;i++){
+               result[i].key=i;
+           }
+           this.setState({
+             bookList:result
+           });
+           
+         })
+    }
 
 	   render() {
      return (
@@ -59,7 +64,9 @@ export default class MainScreen extends React.Component {
         </View>
       </Swiper>	
       <View style={styles.subTitleLine}>
+       <TouchableOpacity onPress={this.updateInfo()}> 
       	<Text>最新发布</Text>
+        </TouchableOpacity>
       </View> 
       <FlatList
           data={this.state.bookList}

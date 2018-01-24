@@ -29,7 +29,14 @@ export default class UserScreen extends React.Component {
     }
     let url = SERVICE_BASE+"register";
     http_req.postJson(url,params,(responseText) => {
-          alert(responseText);
+          // alert(responseText)
+          var result=JSON.parse(responseText)
+          if(result['success']){
+          alert('注册成功');
+          }
+          else{
+            alert('用户名已存在')
+          }
         })
 
   }

@@ -43,19 +43,19 @@ export default class RNCameraView extends Component {
             <WhiteSpace/>
             <View style={{flexDirection:'row',justifyContent:'space-between',width:300,height:100}}>
                 <View style={[{width: 80, height: 80},styles.DotBox]}>
-                <Image style={{width: 60, height: 60,marginLeft:8,marginTop:8}}
+                <Image style={{width: 60, height: 60}}
                        source={this.state.imageUrl}/>
                 </View>
+                <TouchableOpacity  onPress={this._openPicker}>
                 <View style={[{width: 80, height: 80},styles.DotBox]}>
-                    <TouchableOpacity  onPress={this._openPicker}>
-                    <Text>从相册中选择单张图片</Text>
-                    </TouchableOpacity>
+                    <Text>相册</Text>   
                 </View> 
-                <View style={[{width: 80, height: 80},styles.DotBox]}>
-                <TouchableOpacity  onPress={this._openCamera}>
+                 </TouchableOpacity> 
+                 <TouchableOpacity  onPress={this._openCamera}>
+                <View style={[{width: 80, height: 80},styles.DotBox]}>         
                     <Text>拍照</Text>
+                </View>  
                 </TouchableOpacity>
-                </View> 
             </View>
             <WhiteSpace/>
             <View style={{width:300}}>
@@ -76,9 +76,15 @@ export default class RNCameraView extends Component {
             'author':store.getState().user.name,
             'intro':this.intro,
         };
-          let url = SERVICE_BASE+"uploadBook";
+          let url = SERVICE_BASE+"upload/uploadBook";
     http_req.postJson(url,params,(responseText) => {
-           alert(responseText);
+        var result=JSON.parse(responseText)
+        if(result['success']){
+        alert('上传成功');
+        }
+        else{
+          alert('上传失败')
+        }
         });
         // this.uploadImage('uploadBook', params)
         //     .then( res=>{
@@ -130,5 +136,8 @@ const styles =StyleSheet.create({
     borderStyle:'dotted',
     borderWidth:2,
     borderColor:'#6495ED',
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center'
         }
 });

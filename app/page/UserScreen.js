@@ -197,33 +197,7 @@ export default class UserScreen extends React.Component {
                            </View>
           </View>
           <View style={styles.workList}>
-            <Text style={styles.workTitle}>发布漂流瓶</Text>
-
-<Button
-  onPress={this.getBookData}
-  title="show me the data!"
-/>
-
-<Button
-  onPress={this.getBookUsers}
-  title="show me the users!"
-/>
-
-<Button
-  onPress={this.DelBooks}
-  title="delete all the books!"
-/>
-
-              <Button
-                  onPress={this.getAllUserDetails}
-                  title="所有用户详细信息"
-              />
-             <Button
-                  onPress={this.deleteAllMessage}
-                  title="删除所有聊天记录"
-              />
-
-
+            <Text style={styles.workTitle}>菜单栏</Text>
           </View>
         </View>
       )
